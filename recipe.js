@@ -4,6 +4,7 @@ const recipes = [
         "image": "./images/pasta.jpeg",
         "title": "Pasta",
         "description": "This delicious pasta recipe is perfect for a quick and easy meal. Try it out today!"
+        
     },
     {
         "id": 2,
@@ -53,6 +54,13 @@ const recipes = [
         "title": "Paneer Butter Masala",
         "description": "A rich and creamy paneer dish that is sure to be a hit with vegetarians and non-vegetarians alike."
        
+    },
+    {
+        "id": 10,
+        "image": "./images/biryani.jpg",
+        "title": "Chicken Biryani",
+        "description": "A classic Indian rice dish made with tender chicken, basmati rice, and a blend of spices.",
+        
     }
 ];
 
