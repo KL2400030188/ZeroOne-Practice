@@ -36,7 +36,15 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
-
+footer {
+    background: #f8663a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
 header h1 {
     margin: 0;
     font-size: 2.5em;
@@ -203,7 +211,7 @@ nav ul li a:hover {
 .contact-link, .About-us {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ff5722;
+    background-color: #ee761b;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -212,7 +220,7 @@ nav ul li a:hover {
 }
 
 .contact-link:hover, .About-us:hover {
-    background-color: #e64a19;
+    background-color: #282625;
     transform: translateY(-2px);
 }
 
@@ -274,4 +282,41 @@ nav ul li a:hover {
 
 .developer p {
     color: #666;
+}
+
+#recipe-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between items */
+    margin: 20px;
+}
+
+.recipe {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul, ol {
+    margin: 20px 0; /* Add spacing above and below the lists */
+     padding-left: 40px; /*Add padding to align the list items */
+    line-height: 1.6; /* Improve readability with better line spacing */
+    text-align: left; /* Align list items to the left */
+}
+
+ul li, ol li {
+    margin-bottom: 10px; /* Add spacing between list items */
+    font-size: 16px; /* Adjust font size for better readability */
+    color: #333; /* Set a consistent text color */
+    text-align: left;
+}
+
+h2 {
+    margin-top: 30px; /* Add spacing above headings */
+    font-size: 20px; /* Adjust heading size */
+    color: #444; /* Set a consistent heading color */
+    text-align: left; /* Align headings to the left */
 }

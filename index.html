@@ -1,30 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Recipes</title>
-    <link rel="stylesheet" href="styles.css">
+  <title>Sign Up for Foodies-Delight</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1a;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px gray;
+      width: 300px;
+      margin: auto;
+    }
+
+    input, button {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #ea9740;
+      color: white;
+      cursor: pointer;
+    }
+
+    .login-link {
+      margin-top: 10px;
+      display: block;
+      color: #ea9740;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-link:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      color: #ea9740;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Foodies Delight</h1>
-        <p>Explore delicious recipes from around the world!</p>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
-    <section class="recipe-list">
-        <h1>Our Recipes</h1>
-        <br>
-        <div id="recipe-container"></div>
-    </section>
+  <h1>Sign Up</h1>
+  <div class="form-container">
+    <form onsubmit="submitForm(event)">
+      <input type="text" id="name" placeholder="Full Name" required><br>
+      <input type="email" id="email" placeholder="Email" required><br>
+      <input type="password" id="password" placeholder="Password" required><br>
+      <button type="submit">Register</button>
+    </form>
+    <a href="login.html" class="login-link">Already registered? Login</a>
+  </div>
 
-    <script src="recipe.js"></script>
+  <script>
+    function submitForm(event) {
+      event.preventDefault();
+      localStorage.setItem("email", document.getElementById("email").value);
+      localStorage.setItem("password", document.getElementById("password").value);
+      alert("Registration Successful! Proceed to Login.");
+      window.location.href = "login.html"; 
+    }
+  </script>
+
 </body>
 </html>

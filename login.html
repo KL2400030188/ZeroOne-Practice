@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login to Foodies-Delight</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1a;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px gray;
+      width: 300px;
+      margin: auto;
+    }
+
+    input, button {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #ea9740;
+      color: white;
+      cursor: pointer;
+    }
+    h1 {
+      color: #ea9740;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Login</h1>
+  <div class="form-container">
+    <form onsubmit="login(event)">
+      <input type="email" id="login-email" placeholder="Email" required><br>
+      <input type="password" id="login-password" placeholder="Password" required><br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    function login(event) {
+      event.preventDefault();
+      const email = localStorage.getItem("email");
+      const password = localStorage.getItem("password");
+
+      const inputEmail = document.getElementById("login-email").value;
+      const inputPassword = document.getElementById("login-password").value;
+
+      if (email === inputEmail && password === inputPassword) {
+        alert("Login Successful! Redirecting to Home Page.");
+        window.location.href = "mainpage.html";
+      } else {
+        alert("Invalid Email or Password. Please try again.");
+      }
+    }
+  </script>
+
+</body>
+</html>
